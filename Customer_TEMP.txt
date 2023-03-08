@@ -1,0 +1,113 @@
+import java.util.ArrayList;
+
+public class Customer {
+    private String customerNumber;
+    private String name;
+    private String email;
+    private CheckingAccount checkingAccount;
+    private SavingsAccount savingsAccount;
+    private CreditAccount creditAccount;
+    private CurrencyAccount currencyAccount;
+    private ArrayList<Transaction> transactions;
+
+    public Customer(String customerNumber, String name, String email) {
+        this.customerNumber = customerNumber;
+        this.name = name;
+        this.email = email;
+        checkingAccount = new CheckingAccount();
+        transactions = new ArrayList<>();
+    }
+
+    public void createCheckingAccount() {
+        checkingAccount = new CheckingAccount();
+    }
+
+    public void openSavingsAccount(double annualInterestRate) {
+        savingsAccount = new SavingsAccount(annualInterestRate);
+    }
+
+    public void openCreditAccount(double creditLimit, double interestRate) {
+        creditAccount = new CreditAccount(creditLimit, interestRate);
+    }
+
+    public void openCurrencyAccount(String currencyType) {
+        currencyAccount = new CurrencyAccount(currencyType);
+    }
+
+    public void closeAccount(Account account) {
+        if (account instanceof CheckingAccount) {
+            checkingAccount = null;
+        } else if (account instanceof SavingsAccount) {
+            savingsAccount = null;
+        } else if (account instanceof CreditAccount) {
+            creditAccount = null;
+        } else if (account instanceof CurrencyAccount) {
+            currencyAccount = null;
+        }
+    }
+
+    public void deleteCustomer() {
+        checkingAccount = null;
+        savingsAccount = null;
+        creditAccount = null;
+        currencyAccount = null;
+    }
+
+    public void deposit(Transaction transaction) {
+        transactions.add(transaction);
+        if (transaction.getAccount() instanceof CheckingAccount) {
+            checkingAccount.deposit(transaction.getAmount());
+        } else if (transaction.getAccount() instanceof SavingsAccount) {
+            savingsAccount.deposit(transaction.getAmount());
+        } else if (transaction.getAccount() instanceof CreditAccount) {
+            creditAccount.deposit(transaction.getAmount());
+        } else if (transaction.getAccount() instanceof CurrencyAccount) {
+            currencyAccount.deposit(transaction.getAmount());
+        }
+    }
+
+    public void withdraw(Transaction transaction) {
+        transactions.add(transaction);
+        if (transaction.getAccount() instanceof CheckingAccount) {
+            checkingAccount.withdraw(transaction.getAmount());
+        } else if (transaction.getAccount() instanceof SavingsAccount) {
+            savingsAccount.withdraw(transaction.getAmount());
+        } else if (transaction.getAccount() instanceof CreditAccount) {
+            creditAccount.withdraw(transaction.getAmount());
+        } else if (transaction.getAccount() instanceof CurrencyAccount) {
+            currencyAccount.withdraw(transaction.getAmount());
+        }
+    }
+
+    public String getCustomerNumber() {
+        return customerNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public CheckingAccount getCheckingAccount() {
+        return checkingAccount;
+    }
+
+    public SavingsAccount getSavingsAccount() {
+        return savingsAccount;
+    }
+
+    public CreditAccount getCreditAccount() {
+        return creditAccount;
+    }
+
+    public CurrencyAccount getCurrencyAccount() {
+        return currencyAccount;
+    }
+
+    public ArrayList<Transaction> getTransactions() {
+        return transactions;
+    }
+}
