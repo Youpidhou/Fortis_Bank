@@ -1,7 +1,7 @@
 package bus;
 
 public class Customer {
-	private String customerNumber;
+	private String customerID;
 	private String name;
 	private String email;
 	
@@ -9,10 +9,10 @@ public class Customer {
 // -- Getter and Setter
 // -------------------------------------
 	public String getCustomerNumber() {
-		return customerNumber;
+		return customerID;
 	}
 	public void setCustomerNumber(String customerNumber) {
-		this.customerNumber = customerNumber;
+		this.customerID = customerNumber;
 	}
 // -------------------------------------
 	
@@ -33,19 +33,19 @@ public class Customer {
 // --------  Constructeurs -------------
 	// default constructor		
 	public Customer() {
-		this.customerNumber = "Undefined";
+		this.customerID = "Undefined";
 		this.name = "Undefined";
 		this.email = "Undefined";		
 	}
 	// copy constructor	
 	public Customer(Customer newCustomer) {
-		this.customerNumber = newCustomer.customerNumber;
+		this.customerID = newCustomer.customerID;
 		this.name = newCustomer.name;
 		this.email = newCustomer.email;		
 	}
 	// constructor	with parameters
 	public Customer(String customerNumber, String name, String email) {
-		this.customerNumber = customerNumber;
+		this.customerID = customerNumber;
 		this.name = name;
 		this.email = email;
 		
@@ -54,7 +54,7 @@ public class Customer {
 	
 	@Override
 	public String toString() {
-		return "Customer [customerNumber=" + customerNumber + ", name=" + name + ", email=" + email + "]";
+		return "Customer [customerNumber=" + customerID + ", name=" + name + ", email=" + email + "]";
 	}	
 	
 	
