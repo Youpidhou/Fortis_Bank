@@ -31,14 +31,19 @@ public class Customer {
 	}
 
 // --------  Constructeurs -------------
-// -------------------------------------
+	// default constructor		
 	public Customer() {
 		this.customerNumber = "Undefined";
 		this.name = "Undefined";
-		this.email = "Undefined";
-		
+		this.email = "Undefined";		
 	}
-	
+	// copy constructor	
+	public Customer(Customer newCustomer) {
+		this.customerNumber = newCustomer.customerNumber;
+		this.name = newCustomer.name;
+		this.email = newCustomer.email;		
+	}
+	// constructor	with parameters
 	public Customer(String customerNumber, String name, String email) {
 		this.customerNumber = customerNumber;
 		this.name = name;
