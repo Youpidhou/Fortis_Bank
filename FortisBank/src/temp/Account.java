@@ -1,14 +1,13 @@
 package temp;
 
 
-import java.util.Date;
 
 public interface Account {
 	
     String getAccountNumber();
     void setAccountNumber(String accountNumber);
 
-    Date getDateOfOpening();
+    temp.Date getDateOfOpening();
     void setDateOfOpening(Date dateOfOpening);
 
     String getStatus();

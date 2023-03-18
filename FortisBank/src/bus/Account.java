@@ -8,7 +8,7 @@ public class Account {
 	private String status; // Statut du compte (actif ou fermé)		
 	private double balance; // Solde du compte
 	private EnumAccountType accountType; // Type de compte
-	//private Transaction transaction;
+	private Transaction transaction;
 
 	
 	//-------------------------------------
@@ -53,6 +53,13 @@ public class Account {
 		this.accountType = accountType;
 	}
 	//-------------------------------------
+	public Transaction getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(Transaction transaction) {
+		this.transaction = transaction;
+	}
 
 	// constructeur // 
 	public Account() {
@@ -61,34 +68,37 @@ public class Account {
 		this.status = "Undefined";
 		this.balance = 0.00;
 		this.accountType = EnumAccountType.Undefined;
+		this.transaction = new Transaction();
+		
 	}
 
 	// copie du constructeur // 
-	public Account(Account newAccout) {
-		this.accountNumber = newAccout.accountNumber;
-		this.dateOfOpening = newAccout.dateOfOpening;
-		this.status = newAccout.status;
-		this.balance = newAccout.balance;
-		this.accountType = newAccout.accountType;
+	public Account(Account newAccount) {
+		this.accountNumber = newAccount.accountNumber;
+		this.dateOfOpening = newAccount.dateOfOpening;
+		this.status = newAccount.status;
+		this.balance = newAccount.balance;
+		this.accountType = newAccount.accountType;
+		this.transaction = newAccount.transaction;
 	}
 
 	// constructeur avec tous les parametres
 	public Account(String accountNumber, Date dateOfOpening, String status, double balance,
-			EnumAccountType accountType) {
+			EnumAccountType accountType, Transaction transaction) {
 		super();
 		this.accountNumber = accountNumber;
 		this.dateOfOpening = dateOfOpening;
 		this.status = status;
 		this.balance = balance;
 		this.accountType = accountType;
+		this.transaction = transaction;
 	}
 
-	
 	@Override
 	public String toString() {
 		return "Account [accountNumber=" + accountNumber + ", dateOfOpening=" + dateOfOpening + ", status=" + status
-				+ ", balance=" + balance + ", accountType=" + accountType + "]";
+				+ ", balance=" + balance + ", accountType=" + accountType + ", transaction=" + transaction + "]";
 	}
-	
-	
+
+
 }

@@ -1,11 +1,12 @@
-package bus;
+package temp;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListAccounts {
 	
-	private List<Account> accounts;		
+	private List<Account> accounts;
+		
 	
 	// constructeur
 	public ListAccounts(){

@@ -1,81 +1,88 @@
 package temp;
 
-import java.util.Date;
+public abstract class CreditAccount implements Account {
+		
+		private String accountNumber;
+		private Date dateOfOpening;
+		private double balance;
+		private int transaction;
+		private String status;
+		private EnumAccountType accountType;
+	
+	// -- Getter and Setter
+	// -------------------------------------
+		public String getAccountNumber() {
+			return accountNumber;
+		}
+		public void setAccountNumber(String accountNumber) {
+			this.accountNumber = accountNumber;
+		}
+		
+	    public Date getDateOfOpening() {
+	        return dateOfOpening;
+	    }
 
-public class CreditAccount {
-	private String accountNumber;
-	private Date dateOfBirth;
-	private double balance;
-	private int transaction;
+	    public void setDateOfOpening(Date dateOfOpening) {
+	        this.dateOfOpening = dateOfOpening;
+	    } 
+		public double getBalance() {
+			return balance;
+		}
+		public void setBalance(double balance) {
+			this.balance = balance;
+		}	
+		public int getTransaction() {
+			return transaction;
+		}
+		public void setTransaction(int transaction) {
+			this.transaction = transaction;
+		}
+	    public String getStatus() {
+	        return status;
+	    }
+	    public void setStatus(String status) {
+	        this.status = status;
+	    }
+	    public EnumAccountType getAccountType() {
+	        return accountType;
+	    }
+
+	    public void setAccountType(EnumAccountType accountType) {
+	        this.accountType = accountType;
+	    }
+
 
 	
-// -- Getter and Setter
-// -------------------------------------
-	public String getAccountNumber() {
-		return accountNumber;
-	}
-	public void setAccountNumber(String accountNumber) {
-		this.accountNumber = accountNumber;
-	}
-	
-	
-// -------------------------------------
-
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
-	
-// -------------------------------------
-
-	public double getBalance() {
-		return balance;
-	}
-
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
-	
-	public int getTransaction() {
-		return transaction;
-	}
-	public void setTransaction(int transaction) {
-		this.transaction = transaction;
-	}
-	
-// --------  Constructeurs -------------
-// -------------------------------------
 	// default constructor		
 	public CreditAccount() {
 		this.accountNumber = "Undefined";
-		this.dateOfBirth = new Date();
+		this.dateOfOpening = new Date();
 		this.balance = 0.00;
 		this.transaction = 0;
+        this.status = "Undefined";
+        this.accountType = EnumAccountType.Undefined;
+		
 	}
-	// copy constructor	
-	public CreditAccount(CreditAccount newAccount) {
-		this.accountNumber = newAccount.accountNumber;
-		this.dateOfBirth = newAccount.dateOfBirth;
-		this.balance = newAccount.balance;
-		this.transaction = newAccount.transaction;
-	}
-	// constructor	with parameters
-	public CreditAccount(String accountNumber, Date dateOfBirth, double balance, int transaction) {
+	
+	// --------  Constructeurs avec parametres
+	
+	public CreditAccount(String accountNumber, Date dateOfOpening, double balance, int transaction, String status,
+			EnumAccountType accountType) {
 		super();
 		this.accountNumber = accountNumber;
-		this.dateOfBirth = dateOfBirth;
+		this.dateOfOpening = dateOfOpening;
 		this.balance = balance;
 		this.transaction = transaction;
+		this.status = status;
+		this.accountType = accountType;
 	}
 	
-		
+	
 	@Override
 	public String toString() {
-		return "CheckingAccount [accountNumber=" + accountNumber + ", dateOfBirth=" + dateOfBirth + ", balance="
-				+ balance + ", transaction=" + transaction + "]";
+		return "CreditAccount [accountNumber=" + accountNumber + ", dateOfOpening=" + dateOfOpening + ", balance="
+				+ balance + ", transaction=" + transaction + ", status=" + status + ", accountType=" + accountType
+				+ "]";
 	}
-	
 		
 }
