@@ -3,15 +3,23 @@ package bus;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Client {
 	
 	private String clientId;
 	private String name;
 	private String email;
 	private String nip;
+	private Account account;	
 	private List<Account> accounts;
 	
 		
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccount(Account account) {
+		this.account = account;
+	}	
 	
 	// getter and setter
 	//-------------------------------------
@@ -41,8 +49,6 @@ public class Client {
     }
 	
 
-	
-
 // --------  Constructeurs -------------
     
 	// default constructor		
@@ -51,6 +57,7 @@ public class Client {
 		this.name = "Undefined";
 		this.email = "Undefined";
 		this.nip = "Undefined";
+		this.account = new Account();
 		this.accounts = new ArrayList<Account>();
 
 	}
@@ -60,35 +67,38 @@ public class Client {
 		this.name = newClient.name;
 		this.email = newClient.email;
 		this.nip = newClient.nip;
+		this.account = newClient.account;
 		this.accounts = new ArrayList<Account>(newClient.accounts);
 
 	}	
 	
     // constructor	with parameters
-    public Client(String clientId, String name, String email, String nip) {
+    public Client(String clientId, String name, String email, String nip, Account account) {
         this.clientId = clientId;
         this.name = name;
         this.email = email;
         this.nip = nip;
+        this.account = account;
         this.accounts = new ArrayList<Account>();
     }
 	
 	
 	// constructor	with all parameters
     // constructor	with parameters
-    public Client(String clientId, String name, String email, String nip, ArrayList<Account> accounts) {
+    public Client(String clientId, String name, String email, String nip, Account account, ArrayList<Account> accounts) {
         this.clientId = clientId;
         this.name = name;
         this.email = email;
         this.nip = nip;
         this.accounts = accounts;
+        this.accounts = new ArrayList<Account>();
     }
+    
     
     
 	@Override
 	public String toString() {
-		return "Client [clientId=" + clientId + ", name=" + name + ", email=" + email + ", nip=" + nip + ", accounts="
-				+ accounts + "]";
-	}	
-
+		return "Client [clientId=" + clientId + ", name=" + name + ", email=" + email + ", nip=" + nip + ", account="
+				+ account + ", accounts=" + accounts + "]";
+	}
 }

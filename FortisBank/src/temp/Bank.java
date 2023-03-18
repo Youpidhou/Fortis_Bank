@@ -1,5 +1,6 @@
 package temp;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,8 +9,7 @@ public class Bank {
 	private String numberBank; // identifiant de la succursale
 	private String bankName; // Fortis Bank 
 	private String address; // l adresse de la banque
-	private String statut;  // statut de la banque
-	private List<Client> client;
+	private String status;  // statut de la banque
 	private double balance;
 	
 	
@@ -37,19 +37,13 @@ public class Bank {
 	}
 	//-------------------------------------------
 	public String getStatut() {
-		return statut;
+		return status;
 	}
-	public void setStatut(String statut) {
-		this.statut = statut;
-	}
-	//-------------------------------------------
-	public List<Client> getClient() {
-		return client;
-	}
-	public void setClient(List<Client> client) {
-		this.client = client;
+	public void setStatut(String status) {
+		this.status = status;
 	}
 	//-------------------------------------------
+
 	public double getBalance() {
 		return balance;
 	}
@@ -57,62 +51,35 @@ public class Bank {
 		this.balance = balance;
 	}
 	//-------------------------------------------
-	
-	
-	// methode ajouter un clients a la banque
-	
-    public void addClient(Client client) {
-        this.client.add(client);
-    }
-    // methode supprimer les clients de la banque
-    public boolean removeClient(Client client) {
-        return this.client.remove(client);
-    }    
-    
-    // methode pour rechercher un client
-    public Client findClient(String clientId) {
-        for (Client client : this.client) {
-            if (client.getClientId().equals(clientId)) {
-                return client;
-            }
-        }
-        return null;
-    }
-    
-	//-------------------------------------------
-    
-    
+
 	// constructeur par default
 	public Bank() {
 		this.numberBank = "Undefined";
 		this.bankName ="Undefined";
 		this.address ="Undefined";
-		this.statut ="Undefined";
-		this.client = new ArrayList<Client>();
+		this.status ="Undefined";
 		this.balance = 0.00;
 	}
 	
 	
 	// constructeur avec parametres
-	public Bank(String numberBank, String bankName, String address, String statut, List<Client> client,
-			double balance) {
+	public Bank(String numberBank, String bankName, String address, String statut,double balance) {
 		super();
 		this.numberBank = numberBank;
 		this.bankName = bankName;
 		this.address = address;
-		this.statut = statut;
-		this.client = client;
+		this.status = statut;
 		this.balance = balance;
 	}
-	/* Le constructeur par défaut initialise les attributs avec des valeurs par défaut, 
-	 * tandis que le constructeur avec paramètres permet de les initialiser avec 
-	 * des valeurs fournies.*/
 	
 	
 	@Override// affiche les informations da la succursale de la banque
 	public String toString() {
-		return "Bank [numberBank=" + numberBank + ", bankName=" + bankName + ", address=" + address + ", statut="
-				+ statut + ", client=" + client + ", balance=" + balance + "]";
-	}		
-	
+		return "Bank [numberBank=" + numberBank + ", bankName=" + bankName + ", address=" + address + ", status="
+				+ status + ", balance=" + balance + "]";
+	}
+	/* Le constructeur par défaut initialise les attributs avec des valeurs par défaut, 
+	 * tandis que le constructeur avec paramètres permet de les initialiser avec 
+	 * des valeurs fournies.*/
 }
+

@@ -29,7 +29,7 @@ public class ListClients {
 	
 	/*
 	 * créer des instances de cette classe, 
-	 * ajouter des clienta à la liste et 
+	 * ajouter des client a à la liste et 
 	 * accéder à la liste des clients à partir d'autres parties du programme.*/	
 	
 	

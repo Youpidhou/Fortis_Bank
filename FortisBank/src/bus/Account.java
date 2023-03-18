@@ -3,6 +3,7 @@ package bus;
 
 
 public class Account {
+	
 	private String accountNumber; // Numéro du compte
 	private Date dateOfOpening; // Date d'ouverture du compte
 	private String status; // Statut du compte (actif ou fermé)		
