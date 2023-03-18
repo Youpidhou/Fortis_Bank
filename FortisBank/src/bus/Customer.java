@@ -1,9 +1,12 @@
 package bus;
 
 public class Customer {
+	
 	private String customerID;
 	private String name;
 	private String email;
+	
+	
 	
 	
 // -- Getter and Setter
@@ -29,33 +32,57 @@ public class Customer {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+// -------------------------------------
+
+	public EnumAccountType getType() {
+		return type;
+	}
+	public void setType(EnumAccountType type) {
+		this.type = type;
+	}
+	
 
 // --------  Constructeurs -------------
 	// default constructor		
 	public Customer() {
 		this.customerID = "Undefined";
 		this.name = "Undefined";
-		this.email = "Undefined";		
+		this.email = "Undefined";	
+
 	}
 	// copy constructor	
 	public Customer(Customer newCustomer) {
 		this.customerID = newCustomer.customerID;
 		this.name = newCustomer.name;
-		this.email = newCustomer.email;		
+		this.email = newCustomer.email;	
+
 	}
-	// constructor	with parameters
-	public Customer(String customerNumber, String name, String email) {
-		this.customerID = customerNumber;
+	
+	
+	public Customer(String customerID, String name, String email) {
+		this.customerID = customerID;
 		this.name = name;
 		this.email = email;
-		
+
 	}
 	
 	
-	@Override
-	public String toString() {
-		return "Customer [customerNumber=" + customerID + ", name=" + name + ", email=" + email + "]";
-	}	
+	// constructor	with parameters
+	public Customer(String customerID, String name, String email, EnumAccountType type) {
+		this.customerID = customerID;
+		this.name = name;
+		this.email = email;
+		this.type = type;		
+	}
+	
+	
+	// constructor	with all parameters
+
+	
+
+	
+
 	
 	
 
