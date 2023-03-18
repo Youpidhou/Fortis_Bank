@@ -1,8 +1,8 @@
-package bus;
+package temp;
 
 import java.util.Date;
 
-public class SavingAccount {
+public class CreditAccount {
 	private String accountNumber;
 	private Date dateOfBirth;
 	private double balance;
@@ -48,21 +48,21 @@ public class SavingAccount {
 // --------  Constructeurs -------------
 // -------------------------------------
 	// default constructor		
-	public SavingAccount() {
+	public CreditAccount() {
 		this.accountNumber = "Undefined";
 		this.dateOfBirth = new Date();
 		this.balance = 0.00;
 		this.transaction = 0;
 	}
 	// copy constructor	
-	public SavingAccount(SavingAccount newAccount) {
+	public CreditAccount(CreditAccount newAccount) {
 		this.accountNumber = newAccount.accountNumber;
 		this.dateOfBirth = newAccount.dateOfBirth;
 		this.balance = newAccount.balance;
 		this.transaction = newAccount.transaction;
 	}
 	// constructor	with parameters
-	public SavingAccount(String accountNumber, Date dateOfBirth, double balance, int transaction) {
+	public CreditAccount(String accountNumber, Date dateOfBirth, double balance, int transaction) {
 		super();
 		this.accountNumber = accountNumber;
 		this.dateOfBirth = dateOfBirth;
@@ -70,8 +70,7 @@ public class SavingAccount {
 		this.transaction = transaction;
 	}
 	
-	
-	
+		
 	@Override
 	public String toString() {
 		return "CheckingAccount [accountNumber=" + accountNumber + ", dateOfBirth=" + dateOfBirth + ", balance="

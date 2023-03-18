@@ -1,4 +1,4 @@
-package bus;
+package temp;
 
 public enum EnumAccountType {
 	Saving,

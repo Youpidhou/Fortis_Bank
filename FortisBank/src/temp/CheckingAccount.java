@@ -1,8 +1,10 @@
-package bus;
+package temp;
 
-import java.util.Date;
+import temp.Date;
+import temp.Account;
+import temp.EnumAccountType;
 
-public class CheckingAccount {
+public class CheckingAccount implements Account {
 	private String accountNumber;
 	private Date dateOfBirth;
 	private double balance;
@@ -76,6 +78,36 @@ public class CheckingAccount {
 	public String toString() {
 		return "CheckingAccount [accountNumber=" + accountNumber + ", dateOfBirth=" + dateOfBirth + ", balance="
 				+ balance + ", transaction=" + transaction + "]";
+	}
+	@Override
+	public java.util.Date getDateOfOpening() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void setDateOfOpening(java.util.Date dateOfOpening) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public String getStatus() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void setStatus(String status) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public EnumAccountType getAccountType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void setAccountType(EnumAccountType accountType) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 		
