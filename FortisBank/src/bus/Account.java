@@ -67,7 +67,7 @@ public class Account {
 		this.dateOfOpening = new Date();
 		this.status = "Undefined";
 		this.balance = 0.00;
-		this.accountType = EnumAccountType.Undefined;
+		this.accountType = EnumAccountType.Checking;
 		this.transaction = new Transaction();
 		
 	}

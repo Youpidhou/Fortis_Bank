@@ -111,8 +111,11 @@ public class Bank {
 	
 	@Override// affiche les informations da la succursale de la banque
 	public String toString() {
+		/*return "Bank [numberBank=" + numberBank + ", bankName=" + bankName + ", address=" + address + ", statut="
+				+ statut + ", client=" + client + ", balance=" + balance + "]";*/
+		
 		return "Bank [numberBank=" + numberBank + ", bankName=" + bankName + ", address=" + address + ", statut="
-				+ statut + ", client=" + client + ", balance=" + balance + "]";
+		+ statut + ", client=" + client + ", balance=" + balance + "]";
 	}		
 	
 }

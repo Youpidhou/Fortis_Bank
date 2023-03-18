@@ -4,7 +4,5 @@ public enum EnumAccountType {
 	Saving,
 	Checking,
 	Credit,
-	Currency,
-	Undefined;
-
+	Currency
 }
