@@ -1,0 +1,19 @@
+
+
+** Account
+	Ajouter Status
+	
+ ** classe client
+Question: Zip Code, phone, date de naissance sont t ils necessaire(je crois que c est optionnel)
+	On pourrait les ajouter mais ca allourdis
+	
+Question: "EnumStatus Status" ne devrait pas se retrouver dans Account ?
+
+** EnumTransactionType
+	Ajouter "Undefined" => pour le constructeur sans parametre(par default)
+
+** EnumAccountTyp
+	Ajouter "Undefined"
+
+**EnumStatus
+	Ajouter "Undefined"
