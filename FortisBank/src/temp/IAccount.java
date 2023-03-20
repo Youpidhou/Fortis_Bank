@@ -4,16 +4,16 @@ package temp;
 
 public interface IAccount {
 	
-    String getAccountNumber();
+    public String getAccountNumber();
     void setAccountNumber(String accountNumber);
 
-    temp.Date getDateOfOpening();
+    public temp.Date getDateOfOpening();
     void setDateOfOpening(Date dateOfOpening);
 
-    String getStatus();
+    public String getStatus();
     void setStatus(EnumStatus active);
 
-    double getBalance();
+    public double getBalance();
     void setBalance(double balance);
 
     

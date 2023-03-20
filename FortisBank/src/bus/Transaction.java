@@ -1,20 +1,20 @@
 package bus;
 
-public class Transaction {
-	private int transaction;
+public class Transaction implements ITransaction {
+	
+	private int transactionNumber;
 	private String description;
 	private Date dateTransaction;
 	private double amount;
 	private EnumTransactionType transType;
 	
 	
-	
 	// getter and setter
 	public int getTransaction() {
-		return transaction;
+		return transactionNumber;
 	}
 	public void setTransaction(int transaction) {
-		this.transaction = transaction;
+		this.transactionNumber = transaction;
 	}
 	public String getDescription() {
 		return description;
@@ -44,7 +44,7 @@ public class Transaction {
 	
 	// constructeur sans parametre
 	public Transaction() {
-		this.transaction = 0;
+		this.transactionNumber = 0;
 		this.description = "Undefined";
 		this.dateTransaction = new Date();
 		this.amount = 0.00;
@@ -53,7 +53,7 @@ public class Transaction {
 	
 	// copie du constructeur
 	public Transaction(Transaction newTrasaction) {
-		this.transaction = newTrasaction.transaction;
+		this.transactionNumber = newTrasaction.transactionNumber;
 		this.description = newTrasaction.description;
 		this.dateTransaction = newTrasaction.dateTransaction;
 		this.amount = newTrasaction.amount;
@@ -64,7 +64,7 @@ public class Transaction {
 	public Transaction(int transaction, String description, Date dateTransaction, double amount,
 			EnumTransactionType transType) {
 		super();
-		this.transaction = transaction;
+		this.transactionNumber = transaction;
 		this.description = description;
 		this.dateTransaction = dateTransaction;
 		this.amount = amount;
@@ -74,7 +74,7 @@ public class Transaction {
 	
 	@Override
 	public String toString() {
-		return "Transaction [transaction=" + transaction + ", description=" + description + ", dateTransaction="
+		return "Transaction [transaction=" + transactionNumber + ", description=" + description + ", dateTransaction="
 				+ dateTransaction + ", amount=" + amount + ", transType=" + transType + "]";
 	}	
 	

@@ -1,0 +1,32 @@
+En tant qu'IA, je ne peux pas créer de diagrammes visuels directement. Cependant, je peux vous décrire le diagramme de séquence pour certaines actions courantes dans le système bancaire.
+
+    Créer un client et ouvrir un compte courant:
+
+    Le directeur de la banque envoie un message "créerClient" avec les informations du client (numéro de client, nom, e-mail, etc.) à l'objet "Banque".
+    L'objet "Banque" crée un nouvel objet "Client" et envoie un message "ouvrirCompteCourant" au nouvel objet "Client".
+    L'objet "Client" crée un nouvel objet "CompteCourant" et l'ajoute à sa liste de comptes.
+
+    Ouvrir un compte d'épargne pour un client:
+
+    Le directeur de la banque envoie un message "ouvrirCompteEpargne" avec le numéro de client à l'objet "Banque".
+    L'objet "Banque" trouve le client correspondant et envoie un message "ouvrirCompteEpargne" à l'objet "Client" correspondant.
+    L'objet "Client" crée un nouvel objet "CompteEpargne" et l'ajoute à sa liste de comptes.
+
+    Effectuer une transaction (dépôt ou retrait):
+
+    Le client envoie un message "effectuerTransaction" avec les détails de la transaction (numéro de compte, type de transaction, montant) à l'objet "Banque".
+    L'objet "Banque" trouve le compte correspondant et envoie un message "effectuerTransaction" avec les détails de la transaction à l'objet "Compte" correspondant.
+    L'objet "Compte" met à jour son solde et crée un nouvel objet "Transaction" qu'il ajoute à sa liste de transactions.
+
+    Fermer un compte pour un client (sauf compte courant):
+
+    Le directeur de la banque envoie un message "fermerCompte" avec le numéro de client et le numéro de compte à l'objet "Banque".
+    L'objet "Banque" trouve le client et le compte correspondants, puis envoie un message "fermerCompte" avec le numéro de compte à l'objet "Client" correspondant.
+    L'objet "Client" supprime l'objet "Compte" de sa liste de comptes.
+
+    Supprimer un client:
+
+    Le directeur de la banque envoie un message "supprimerClient" avec le numéro de client à l'objet "Banque".
+    L'objet "Banque" supprime l'objet "Client" correspondant de sa liste de clients.
+
+Ces scénarios représentent les principales actions effectuées dans le système bancaire. Vous pouvez utiliser un outil de modélisation UML pour créer un diagramme de séquence visuel basé sur ces descriptions.

@@ -6,8 +6,7 @@ import java.util.List;
 public class BankManager {
 	
 	private String managerID;
-	private List<Client> clients; // creer un nouveau client
-	
+	private List<Client> clients; // créer un nouveau client
 	
 	public String getManagerID() {
 		return managerID;
@@ -23,17 +22,14 @@ public class BankManager {
 		this.clients = clients;
 	}
 	
-	// methode ajouter un clients a la banque
-	
     public void addClient(Client client) {
         this.clients.add(client);
     }
-    // methode supprimer les clients de la banque
+    
     public boolean removeClient(Client client) {
         return this.clients.remove(client);
     }    
     
-    // methode pour rechercher un client
     public Client findClient(String clientId) {
         for (Client client : this.clients) {
             if (client.getClientId().equals(clientId)) {
@@ -42,28 +38,43 @@ public class BankManager {
         }
         return null;
     }
+
+    // Méthode pour ajouter un compte à un client
+    public void addAccount(String clientId, Account account) {
+        Client client = findClient(clientId);
+        if (client != null) {
+            client.getAccounts().add(account);
+        }
+    }
+
+    // Méthode pour supprimer un compte d'un client
+    public boolean removeAccount(String clientId, String accountNumber) {
+        Client client = findClient(clientId);
+        if (client != null) {
+            for (Account account : client.getAccounts()) {
+                if (account.getAccountNumber().equals(accountNumber)) {
+                    return client.getAccounts().remove(account);
+                }
+            }
+        }
+        return false;
+    }
     
-    
-    
-	// constructeur par default
+	// constructeur par défaut
 	public BankManager() {
 		this.managerID = "Undefined";
 		this.clients = new ArrayList<Client>();
-
 	}
 	
-	
-	// constructeur avec parametres
+	// constructeur avec paramètres
 	public BankManager(String managerID, List<Client> client) {
 		this.managerID = managerID;
 		this.clients = client;
 	}
 	
-	
 	@Override
 	public String toString() {
 		return "BankManager [managerID=" + managerID + ", clients=" + clients + "]";
 	}
-	
 	
 }

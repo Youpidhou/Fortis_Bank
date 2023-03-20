@@ -10,6 +10,7 @@ public class Bank {
 	private String address; // l adresse de la banque
 	private String status;  // statut de la banque
 	private double balance;
+	private ZIPCODE zipcode; // ajouter get set
 	
 	
 	//  getter and setter
