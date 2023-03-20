@@ -2,7 +2,7 @@ package temp;
 
 
 
-public interface Account {
+public interface IAccount {
 	
     String getAccountNumber();
     void setAccountNumber(String accountNumber);
@@ -11,17 +11,15 @@ public interface Account {
     void setDateOfOpening(Date dateOfOpening);
 
     String getStatus();
-    void setStatus(String status);
+    void setStatus(EnumStatus active);
 
     double getBalance();
     void setBalance(double balance);
 
-    EnumAccountType getAccountType();
-    void setAccountType(EnumAccountType accountType);
     
     // 
     default String accountInfo() {
         return "Account [accountNumber=" + getAccountNumber() + ", dateOfOpening=" + getDateOfOpening() + ", status=" + getStatus()
-                + ", balance=" + getBalance() + ", accountType=" + getAccountType() + "]";
+                + ", balance=" + getBalance() + "]";
     }
 }

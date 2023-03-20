@@ -9,10 +9,11 @@ public class Bank {
 	private String numberBank; // identifiant de la succursale
 	private String bankName; // Fortis Bank 
 	private String address; // l adresse de la banque
-	private String status;  // statut de la banque
+	private EnumStatus status;// statut de la banque 
 	private double balance;
 	
 	
+
 	//  getter and setter
 	//-------------------------------------------
 	public String getNumberBank() {
@@ -36,17 +37,18 @@ public class Bank {
 		this.address = address;
 	}
 	//-------------------------------------------
-	public String getStatut() {
-		return status;
-	}
-	public void setStatut(String status) {
-		this.status = status;
-	}
-	//-------------------------------------------
 
 	public double getBalance() {
 		return balance;
 	}
+	
+	public EnumStatus getStatus() {
+		return status;
+	}
+	public void setStatus(EnumStatus status) {
+		this.status = status;
+	}
+	
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
@@ -57,27 +59,26 @@ public class Bank {
 		this.numberBank = "Undefined";
 		this.bankName ="Undefined";
 		this.address ="Undefined";
-		this.status ="Undefined";
+		this.status = EnumStatus.Undefined;
 		this.balance = 0.00;
-	}
-	
+	}	
 	
 	// constructeur avec parametres
-	public Bank(String numberBank, String bankName, String address, String statut,double balance) {
+	public Bank(String numberBank, String bankName, String address, EnumStatus statut,double balance) {
 		super();
 		this.numberBank = numberBank;
 		this.bankName = bankName;
 		this.address = address;
 		this.status = statut;
 		this.balance = balance;
-	}
-	
-	
-	@Override// affiche les informations da la succursale de la banque
+	}	
+
+	@Override
 	public String toString() {
-		return "Bank [numberBank=" + numberBank + ", bankName=" + bankName + ", address=" + address + ", status="
-				+ status + ", balance=" + balance + "]";
+	    return String.format("Bank [numberBank=%s, bankName=%s, address=%s, status=%s, balance=%.2f]",
+	                         numberBank, bankName, address, status, balance);
 	}
+
 	/* Le constructeur par défaut initialise les attributs avec des valeurs par défaut, 
 	 * tandis que le constructeur avec paramètres permet de les initialiser avec 
 	 * des valeurs fournies.*/

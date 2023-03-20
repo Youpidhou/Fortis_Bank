@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ListAccounts {
 	
-	private List<Account> accounts;
+	private List<IAccount> accounts;
 		
 	
 	// constructeur
@@ -15,12 +15,12 @@ public class ListAccounts {
 	
 	
 	// methode pour ajouter un compte
-	public void addAccount(Account account) {
+	public void addAccount(IAccount account) {
 		accounts.add(account);
 	}
 	
 	// getter pour acceder a la liste des comptes de l'exterieur
-	public List<Account> getAccounts(){
+	public List<IAccount> getAccounts(){
 		return accounts;
 	}
 	
