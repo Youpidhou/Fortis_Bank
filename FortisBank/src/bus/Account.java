@@ -67,7 +67,15 @@ public class Account {
         this.transactions = transactions;
     }
 	//-------------------------------------
-    
+    public boolean Withdraw(double amount) {
+        if (this.balance >= amount) {
+            this.balance -= amount;
+            return true;
+        }
+        return false;
+    }
+  //-------------------------------------
+
 
 
 

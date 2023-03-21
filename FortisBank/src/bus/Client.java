@@ -60,6 +60,8 @@ public class Client {
 		this.account = account;
 	}	
 	*/
+	
+	
     // Getter and setter for accounts
     public List<Account> getAccounts() {
         return accounts;

@@ -8,6 +8,8 @@ public class BankManager {
 	private String managerID;
 	private List<Client> clients; // créer un nouveau client
 	
+	
+	// getter et setter
 	public String getManagerID() {
 		return managerID;
 	}
@@ -15,21 +17,28 @@ public class BankManager {
 		this.managerID = managerID;
 	}
 	
+	
+	// cree liste de client
 	public List<Client> getClients() {
 		return clients;
 	}
+	
+	// Définition de la liste de clients pour le gestionnaire de banque
 	public void setClients(List<Client> clients) {
 		this.clients = clients;
 	}
 	
+	// Ajout du client à la liste de clients du gestionnaire de banque
     public void addClient(Client client) {
         this.clients.add(client);
     }
     
+    // suppression du client à la liste de clients du gestionnaire de banque
     public boolean removeClient(Client client) {
         return this.clients.remove(client);
     }    
     
+    // trouve le client dans la liste de clients du gestionnaire de banque
     public Client findClient(String clientId) {
         for (Client client : this.clients) {
             if (client.getClientId().equals(clientId)) {
@@ -60,6 +69,12 @@ public class BankManager {
         return false;
     }
     
+    // methode pour récupérer une liste contenant tous les clients du gestionnaire de banque :
+    public List<Client> getAllClients() {
+        return new ArrayList<>(this.clients);
+    }
+    
+    
 	// constructeur par défaut
 	public BankManager() {
 		this.managerID = "Undefined";
@@ -72,9 +87,28 @@ public class BankManager {
 		this.clients = client;
 	}
 	
+	
+	
 	@Override
 	public String toString() {
 		return "BankManager [managerID=" + managerID + ", clients=" + clients + "]";
 	}
+	/*
+	@Override
+	public String toString() {
+	    StringBuilder stringbuilder = new StringBuilder();
+	    stringbuilder.append("BankManager [managerID=").append(managerID).append(", clients=[");
+	    
+	    List<Client> allClients = getAllClients();
+	    
+	    for (Client client : allClients) {
+	    	stringbuilder.append(client.getName()).append(", ").append(client.getClientId()).append(", ").append(client.getAccounts());
+	    }
+	    stringbuilder.append("]]");
+	    return stringbuilder.toString();
+	}*/
+
+	
+
 	
 }
