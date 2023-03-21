@@ -1,6 +1,9 @@
-package bus;
+package Version_IAccountable;
+
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 
 public class ListClients {
@@ -29,7 +32,7 @@ public class ListClients {
 	
 	/*
 	 * créer des instances de cette classe, 
-	 * ajouter des client a à la liste et 
+	 * ajouter des clienta à la liste et 
 	 * accéder à la liste des clients à partir d'autres parties du programme.*/	
 	
 	

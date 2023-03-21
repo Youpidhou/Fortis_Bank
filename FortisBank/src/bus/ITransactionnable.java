@@ -1,6 +1,6 @@
 package bus;
 
-public interface ITransaction {
+public interface ITransactionnable {
     int getTransaction();
     void setTransaction(int transaction);
     String getDescription();

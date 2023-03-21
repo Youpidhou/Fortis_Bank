@@ -1,6 +1,6 @@
 package bus;
 
-public class Transaction implements ITransaction {
+public class Transaction implements ITransactionnable {
 	
 	private int transactionNumber;
 	private String description;

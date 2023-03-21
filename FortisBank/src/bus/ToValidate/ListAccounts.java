@@ -1,7 +1,14 @@
-package bus;
+package bus.ToValidate;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import bus.Account;
+
+
+// cette class est remplacer par la class BankManager
+// qui fait la gestion des Accounts et des Clients
+// a valider
 
 public class ListAccounts {
 	

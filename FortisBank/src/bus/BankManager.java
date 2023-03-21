@@ -7,16 +7,18 @@ public class BankManager {
 	
 	private String managerID;
 	private List<Client> clients; // créer un nouveau client
-	
+	private List<Account> accounts;
 	
 	// getter et setter
 	public String getManagerID() {
 		return managerID;
 	}
+	
 	public void setManagerID(String managerID) {
 		this.managerID = managerID;
 	}
 	
+	//---------------Clients ----------------------
 	
 	// cree liste de client
 	public List<Client> getClients() {
@@ -73,27 +75,75 @@ public class BankManager {
     public List<Client> getAllClients() {
         return new ArrayList<>(this.clients);
     }
+    //------------------Accounts---------------------------------
+    public void AccountManager() {
+        accounts = new ArrayList<>();
+    }
+
     
+    // Méthode pour ajouter un compte
+    public void addAccount(Account account) {
+        accounts.add(account);
+    }
+    
+    // Méthode pour supprimer un compte
+    public void removeAccount(Account account) {
+        accounts.remove(account);
+    }
+    
+    // Méthode pour rechercher un compte par numéro de compte
+    public Account findAccount(String accountNumber) {
+        for (Account account : accounts) {
+            if (account.getAccountNumber().equals(accountNumber)) {
+                return account;
+            }
+        }
+        return null;
+    }
+    
+    // Méthode pour récupérer tous les comptes
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+    
+	public void setAccounts(List<Account> accounts) {
+		this.accounts = accounts;
+	}
+
+    
+    //-----------------------------------------------------------
+        
     
 	// constructeur par défaut
 	public BankManager() {
 		this.managerID = "Undefined";
 		this.clients = new ArrayList<Client>();
+		this.accounts = new ArrayList<Account>();
 	}
+	
+	// copie du constructeur
+	public BankManager(BankManager newBankManager) {
+		this.managerID = newBankManager.managerID;
+		this.clients = newBankManager.clients;
+		this.accounts = newBankManager.accounts;
+	}
+	
 	
 	// constructeur avec paramètres
-	public BankManager(String managerID, List<Client> client) {
+	public BankManager(String managerID, List<Client> clients, List<Account> accounts) {
+		super();
 		this.managerID = managerID;
-		this.clients = client;
+		this.clients = clients;
+		this.accounts = accounts;
 	}
-	
-	
+
 	
 	@Override
 	public String toString() {
-		return "BankManager [managerID=" + managerID + ", clients=" + clients + "]";
+		return "BankManager [managerID=" + managerID + ", clients=" + clients + ", accounts=" + accounts + "]";
 	}
-	/*
+	
+/*
 	@Override
 	public String toString() {
 	    StringBuilder stringbuilder = new StringBuilder();

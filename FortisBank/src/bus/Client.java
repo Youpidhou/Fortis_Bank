@@ -9,8 +9,7 @@ public class Client {
 	private String clientId;
 	private String name;
 	private String email;
-	private String nip;
-	//private Account account;	
+	private String nip;	
 	private List<Account> accounts;
 	private ZIPCODE zipcode;		
 
@@ -53,16 +52,7 @@ public class Client {
 	}
 	
 	//-------------------------------------
-	/*public Account getAccount() {
-		return account;
-	}
-	public void setAccount(Account account) {
-		this.account = account;
-	}	
-	*/
-	
-	
-    // Getter and setter for accounts
+
     public List<Account> getAccounts() {
         return accounts;
     }
@@ -85,7 +75,6 @@ public class Client {
 		this.email = "Undefined";
 		this.zipcode = new ZIPCODE();
 		this.nip = "Undefined";
-		//this.account = new Account();
 		this.accounts = new ArrayList<Account>();
 
 	}
@@ -96,7 +85,6 @@ public class Client {
 		this.email = newClient.email;
 		this.zipcode = newClient.zipcode;
 		this.nip = newClient.nip;
-		//this.account = newClient.account;
 		this.accounts = new ArrayList<Account>(newClient.accounts);
 
 	}	
@@ -107,18 +95,16 @@ public class Client {
         this.email = email;
         this.zipcode = zipcode;
         this.nip = nip;
-        //this.account = account;
         this.accounts = new ArrayList<Account>();
     }
 	
     // constructor	with parameters
-    public Client(String clientId, String name, String email,ZIPCODE zipcode, String nip/*, Account account*/, ArrayList<Account> accounts) {
+    public Client(String clientId, String name, String email,ZIPCODE zipcode, String nip, ArrayList<Account> accounts) {
         this.clientId = clientId;
         this.name = name;
         this.email = email;
         this.zipcode = zipcode;
         this.nip = nip;
-        //this.accounts = accounts;
         this.accounts = new ArrayList<Account>();
     }
     
@@ -128,15 +114,6 @@ public class Client {
 		return "Client [clientId=" + clientId + ", name=" + name + ", email=" + email + ", nip=" + nip + ", accounts="
 				+ accounts + ", zipcode=" + zipcode + "]";
 	}
-    
-    /*
-	@Override
-	public String toString() {
-		return "Client [clientId=" + clientId + ", name=" + name + ", email=" + email + ", nip=" + nip + ", account="
-				+ account + ", accounts=" + accounts + ", zipcode=" + zipcode + "]";
-	}
-    */
-
-    
+       
 
 }

@@ -1,7 +1,9 @@
-package bus;
+package bus.ToValidate;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import bus.Transaction;
 
 public class ListTransactions {
 

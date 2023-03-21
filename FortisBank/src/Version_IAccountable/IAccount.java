@@ -1,4 +1,4 @@
-package temp;
+package Version_IAccountable;
 
 
 
@@ -7,7 +7,7 @@ public interface IAccount {
     public String getAccountNumber();
     void setAccountNumber(String accountNumber);
 
-    public temp.Date getDateOfOpening();
+    public Version_IAccountable.Date getDateOfOpening();
     void setDateOfOpening(Date dateOfOpening);
 
     public String getStatus();

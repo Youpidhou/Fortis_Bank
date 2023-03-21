@@ -3,7 +3,7 @@ package bus;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Account {
+public class Account extends Transaction{
 	
 	private String accountNumber; // Numéro du compte
 	private Date dateOfOpening; // Date d'ouverture du compte

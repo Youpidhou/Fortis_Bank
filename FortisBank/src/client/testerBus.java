@@ -100,6 +100,7 @@ public class testerBus {
 	
 	// way # 1 // print de tous les compte du client
 	List<Account> accountcl001 = client001.getAccounts();
+	
 	for(Account account : accountcl001) {
 		System.out.println("Compte du client no: " +client001.getClientId() + " " + account);
 	}
