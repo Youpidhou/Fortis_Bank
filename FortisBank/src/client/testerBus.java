@@ -1,3 +1,4 @@
+
 package client;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class testerBus {
 	zipcodeBank.setState("New York");
 	zipcodeBank.setZipcode("10005");
 	bank.setZipcode(zipcodeBank);
-	bank.setStatut(EnumStatus.Active);
+	bank.setStatus(EnumStatus.Active);
 	bank.setBalance(1000000000.00);
 	
 	// print bank
@@ -145,6 +146,8 @@ public class testerBus {
 	
 	System.out.println("Liste des compte du client 001 : " + client001.getAccounts());
 	System.out.println(client001);
+	
+	System.out.println("Tester made by Dominic Potvin");
 	
 	//System.out.println(bankManager);
 		

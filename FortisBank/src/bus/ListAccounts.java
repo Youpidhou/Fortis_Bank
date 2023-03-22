@@ -1,12 +1,16 @@
-package Version_IAccountable;
+package bus;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+// cette class est remplacer par la class BankManager
+// qui fait la gestion des Accounts et des Clients
+// a valider
+
 public class ListAccounts {
 	
-	private List<IAccount> accounts;
-		
+	private List<Account> accounts;		
 	
 	// constructeur
 	public ListAccounts(){
@@ -15,12 +19,12 @@ public class ListAccounts {
 	
 	
 	// methode pour ajouter un compte
-	public void addAccount(IAccount account) {
+	public void addAccount(Account account) {
 		accounts.add(account);
 	}
 	
 	// getter pour acceder a la liste des comptes de l'exterieur
-	public List<IAccount> getAccounts(){
+	public List<Account> getAccounts(){
 		return accounts;
 	}
 	

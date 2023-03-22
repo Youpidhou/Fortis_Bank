@@ -1,0 +1,18 @@
+[5:14 PM] Miguel Beauchemin
+
+                  Extended Project
+                Project + final exam 
+part 1 : Analysis and Design 
+
+part 2 : business layer Implementation 
+
+part 3 : Presentation Layer 
+    data: serialized file 
+        FileManager class (Write / Read serialized File) 
+    client1 : Console Application and saving data into serialized file (bank.ser ou bank.bin) (1 = add 2 = remove ...) 
+    client2 : GUI Application 
+
+part 4 : Database
+    data: database classes (a mettre dans bus) (account_db, client_db... )
+    client: GUI Application (jFrame)
+

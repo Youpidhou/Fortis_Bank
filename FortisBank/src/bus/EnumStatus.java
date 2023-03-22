@@ -2,7 +2,9 @@ package bus;
 
 public enum EnumStatus{
 	Active,
-	Closed,
+	Innactive,
+	Open,
+	Close,
 	Bankruptcy,
 	Undefined;
 }

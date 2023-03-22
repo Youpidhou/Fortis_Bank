@@ -1,10 +1,12 @@
-package Version_IAccountable;
-
-
+package bus;
 import java.util.ArrayList;
 import java.util.List;
 
 
+
+//cette class est remplacer par la class BankManager
+//qui fait la gestion des Accounts et des Clients
+//a valider
 
 public class ListClients {
 	
@@ -32,7 +34,7 @@ public class ListClients {
 	
 	/*
 	 * créer des instances de cette classe, 
-	 * ajouter des clienta à la liste et 
+	 * ajouter des client a à la liste et 
 	 * accéder à la liste des clients à partir d'autres parties du programme.*/	
 	
 	
