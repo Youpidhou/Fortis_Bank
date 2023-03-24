@@ -16,7 +16,7 @@ public class Client {
 	private String email;
 	private String nip;	
 	private List<Account> accounts;
-	private ZIPCODE zipcode;		
+	private Zipcode zipcode;		
 
 	
 	// Getter and Setter for clientId
@@ -52,10 +52,10 @@ public class Client {
 	}
 	
 	// Getter and Setter for zipcode
-	public ZIPCODE getZipcode() {
+	public Zipcode getZipcode() {
 		return zipcode;
 	}
-	public void setZipcode(ZIPCODE zipcode) {
+	public void setZipcode(Zipcode zipcode) {
 		this.zipcode = zipcode;
 	}
 	
@@ -86,7 +86,7 @@ public class Client {
         this.clientId = "Undefined";
         this.name = "Undefined";
         this.email = "Undefined";
-        this.zipcode = new ZIPCODE();
+        this.zipcode = new Zipcode();
         this.nip = "Undefined";
         this.accounts = new ArrayList<>();
     }
@@ -114,7 +114,7 @@ public class Client {
      * @param zipcode The client ZIP code.
      * @param nip The client NIP.
      */
-    public Client(String clientId, String name, String email, ZIPCODE zipcode, String nip) {
+    public Client(String clientId, String name, String email, Zipcode zipcode, String nip) {
         this.clientId = clientId;
         this.name = name;
         this.email = email;
@@ -133,7 +133,7 @@ public class Client {
      * @param nip The client NIP.
      * @param accounts The list of accounts for this client.
      */
-    public Client(String clientId, String name, String email, ZIPCODE zipcode, String nip, ArrayList<Account> accounts) {
+    public Client(String clientId, String name, String email, Zipcode zipcode, String nip, ArrayList<Account> accounts) {
         this.clientId = clientId;
         this.name = name;
         this.email = email;

@@ -1,9 +1,13 @@
 package bus;
 
-
+/**
+ * 
+ * @author Miguel Beauchemin
+ * @author Dominic Potvin
+ */
 public class Transaction implements ITransactionnable {
 	
-	// instance variables
+	// Attributes
 	private int transactionNumber;
 	private String description;
 	private Date dateTransaction;

@@ -2,7 +2,7 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_-RKXgcWuEe2an_-WlNebmg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_-RKXgsWuEe2an_-WlNebmg" bindingContexts="_-RKXi8WuEe2an_-WlNebmg">
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList/>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_-RKXgsWuEe2an_-WlNebmg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_-b0IacWuEe2an_-WlNebmg" label="%trimmedwindow.label.eclipseSDK" x="-1842" y="78" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_-RKXgsWuEe2an_-WlNebmg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_-b0IacWuEe2an_-WlNebmg" label="%trimmedwindow.label.eclipseSDK" x="335" y="106" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -357,7 +357,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_-c9-4sWuEe2an_-WlNebmg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-dHv4MWuEe2an_-WlNebmg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_-RnFnsWuEe2an_-WlNebmg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_pZSeoMptEe2GQf3qxkcIPg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_-RnFnsWuEe2an_-WlNebmg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_-c9-48WuEe2an_-WlNebmg" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -385,7 +385,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_-c9-6sWuEe2an_-WlNebmg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-dHv7cWuEe2an_-WlNebmg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_-RnFF8WuEe2an_-WlNebmg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_pZTswMptEe2GQf3qxkcIPg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_-RnFF8WuEe2an_-WlNebmg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_-c9-68WuEe2an_-WlNebmg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -619,10 +619,6 @@
     <bindings xmi:id="_-R9pk8WuEe2an_-WlNebmg" keySequence="ALT+F5" command="_-RwNhMWuEe2an_-WlNebmg"/>
     <bindings xmi:id="_-R9plsWuEe2an_-WlNebmg" keySequence="F11" command="_-RwNgsWuEe2an_-WlNebmg"/>
     <bindings xmi:id="_-R9pl8WuEe2an_-WlNebmg" keySequence="F12" command="_-RnFUsWuEe2an_-WlNebmg"/>
-    <bindings xmi:id="_-R9pmcWuEe2an_-WlNebmg" keySequence="CTRL+&#xc8;" command="_-RnFQMWuEe2an_-WlNebmg">
-      <tags>locale:fr</tags>
-      <parameters xmi:id="_-R9pmsWuEe2an_-WlNebmg" elementId="Splitter.isHorizontal" name="Splitter.isHorizontal" value="false"/>
-    </bindings>
     <bindings xmi:id="_-R9pocWuEe2an_-WlNebmg" keySequence="F2" command="_-RnEAcWuEe2an_-WlNebmg"/>
     <bindings xmi:id="_-R9ppMWuEe2an_-WlNebmg" keySequence="F3" command="_-RnE_8WuEe2an_-WlNebmg"/>
     <bindings xmi:id="_-R9pp8WuEe2an_-WlNebmg" keySequence="F4" command="_-RnEE8WuEe2an_-WlNebmg"/>

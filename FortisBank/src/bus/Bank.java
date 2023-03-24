@@ -11,7 +11,7 @@ public class Bank {
 	private String numberBank;
 	private String bankName;
 	private String address;
-	private ZIPCODE zipcode;
+	private Zipcode zipcode;
 	private EnumStatus status;
 	private double balance;
 	
@@ -40,10 +40,10 @@ public class Bank {
 	}
 	
 	// Getters and setters for zipcode
-	public ZIPCODE getZipcode() {
+	public Zipcode getZipcode() {
 		return zipcode;
 	}
-	public void setZipcode(ZIPCODE zipcode) {
+	public void setZipcode(Zipcode zipcode) {
 		this.zipcode = zipcode;
 	}
 	
@@ -71,7 +71,7 @@ public class Bank {
 		this.numberBank = "Undefined";
 		this.bankName = "Undefined";
 		this.address = "Undefined";
-		this.zipcode = new ZIPCODE();
+		this.zipcode = new Zipcode();
 		this.status = EnumStatus.Undefined;
 		this.balance = 0.00;
 	}
@@ -98,7 +98,7 @@ public class Bank {
 	 * @param status The status of the bank.
 	 * @param balance The current balance of the bank.
 	 */
-	public Bank(String numberBank, String bankName, String address, ZIPCODE zipcode, EnumStatus status, double balance) {
+	public Bank(String numberBank, String bankName, String address, Zipcode zipcode, EnumStatus status, double balance) {
 		this.numberBank = numberBank;
 		this.bankName = bankName;
 		this.address = address;

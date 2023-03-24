@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Mig\eclipse\workspacesMiguelBeauchemin\FortisBank"/>
 			<item value="E:\Formation_College_LaSalle\Session_3_Hiver_2023\420-PA3-AS_Programmation Orientee Objet(Java)\Exercices\FortisBank\Fortis_Bank\FortisBank"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
