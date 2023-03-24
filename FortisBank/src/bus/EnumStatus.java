@@ -4,7 +4,7 @@ public enum EnumStatus{
 	Active,
 	Innactive,
 	Open,
-	Close,
+	Closed,
 	Bankruptcy,
 	Undefined;
 }

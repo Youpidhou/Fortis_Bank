@@ -1,8 +1,10 @@
 package bus;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * 
+ * @author Miguel Beauchemin
+ * @author Dominic Potvin
+ */
 public class Bank {
 
 	// Attributes
@@ -62,6 +64,9 @@ public class Bank {
 	}
 	
 	// Constructors
+	/**
+	 * Default constructor sets all attributes to undefined values.
+	 */
 	public Bank() {
 		this.numberBank = "Undefined";
 		this.bankName = "Undefined";
@@ -71,6 +76,10 @@ public class Bank {
 		this.balance = 0.00;
 	}
 	
+	/**
+	 * Copy constructor creates a new Bank object with the same attributes as the given Bank object.
+	 * @param newBank The Bank object to copy.
+	 */
 	public Bank(Bank newBank) {
 		this.numberBank = newBank.numberBank;
 		this.bankName = newBank.bankName;
@@ -80,6 +89,15 @@ public class Bank {
 		this.balance = newBank.balance;
 	}
 	
+	/**
+	 * Constructor creates a new Bank object with the given attributes.
+	 * @param numberBank The bank number.
+	 * @param bankName The name of the bank.
+	 * @param address The address of the bank.
+	 * @param zipcode The ZIPCODE object representing the bank's ZIP code.
+	 * @param status The status of the bank.
+	 * @param balance The current balance of the bank.
+	 */
 	public Bank(String numberBank, String bankName, String address, ZIPCODE zipcode, EnumStatus status, double balance) {
 		this.numberBank = numberBank;
 		this.bankName = bankName;
@@ -90,6 +108,9 @@ public class Bank {
 	}
 	
 	// Method to display the information of the current object as a string
+	/**
+	 * Returns a string representation of this Bank object.
+	 */
 	@Override
 	public String toString() {
 		return String.format("Bank [numberBank=%s, bankName=%s, address=%s, zipcode=%s, status=%s, balance=%.2f]", numberBank, bankName, address, zipcode, status, balance);
