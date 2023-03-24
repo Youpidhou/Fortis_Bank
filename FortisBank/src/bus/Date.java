@@ -2,17 +2,16 @@ package bus;
 
 import java.io.Serializable;
 
+public class Date extends Object implements Serializable{
+	
 	/**
 	 * 
 	 * @author Miguel Beauchemin
 	 * @author Dominic Potvin
 	 */
-public class Date extends Object implements Serializable{
-	
-
 	private static final long serialVersionUID = 1L;
 	
-	// Attributes
+	// instance variables
 	private int month;
 	private int day;
 	private int year;

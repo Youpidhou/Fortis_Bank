@@ -1,5 +1,7 @@
+
 package client;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import bus.Account;
@@ -11,13 +13,8 @@ import bus.EnumAccountType;
 import bus.EnumStatus;
 import bus.EnumTransactionType;
 import bus.Transaction;
-import bus.Zipcode;
+import bus.ZIPCODE;
 
-
-/**
- * @author Dominic Potvin
- * 
- * */
 public class testerBus {
 
 	public static void main(String[] args) {
@@ -28,7 +25,7 @@ public class testerBus {
 	bank.setBankName("Fortis Bank");
 	bank.setNumberBank("001");
 	bank.setAddress("95 Wallstreet");
-	Zipcode zipcodeBank = new Zipcode();
+	ZIPCODE zipcodeBank = new ZIPCODE();
 	zipcodeBank.setCity("New York");
 	zipcodeBank.setState("New York");
 	zipcodeBank.setZipcode("10005");
@@ -50,7 +47,7 @@ public class testerBus {
 	client001.setClientId("cl001");
 	client001.setName("George De LA Jungle");
 	client001.setEmail("georgedelajungle@gorrilla.com");
-	Zipcode zipcodeClient001 = new Zipcode();
+	ZIPCODE zipcodeClient001 = new ZIPCODE();
 	zipcodeClient001.setCity("New York");
 	zipcodeClient001.setZipcode("10004");
 	zipcodeClient001.setState("New York");	
@@ -65,7 +62,7 @@ public class testerBus {
 	client002.setClientId("cl002");
 	client002.setName("Goldorak ");
 	client002.setEmail("goldo@rak.com");
-	Zipcode zipcodeClient002 = new Zipcode();
+	ZIPCODE zipcodeClient002 = new ZIPCODE();
 	zipcodeClient002.setCity("New York");
 	zipcodeClient002.setZipcode("10002");
 	zipcodeClient002.setState("New York");	
@@ -149,6 +146,8 @@ public class testerBus {
 	
 	System.out.println("Liste des compte du client 001 : " + client001.getAccounts());
 	System.out.println(client001);
+	
+	System.out.println("Tester made by Dominic Potvin");
 	
 	//System.out.println(bankManager);
 		

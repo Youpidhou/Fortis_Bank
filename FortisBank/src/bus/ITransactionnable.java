@@ -1,10 +1,5 @@
 package bus;
 
-/**
- * 
- * @author Miguel Beauchemin
- * @author Dominic Potvin
- */
 public interface ITransactionnable {
     
     // Getters and setters for transaction
